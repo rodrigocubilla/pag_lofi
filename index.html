@@ -5,35 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stay in LoFi: study, work, chill and relax.</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./assets/imgs/logo.png">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <!--HEADER-->
     <header>
-        <div class="container">
-            <p class="logo">Stay in LoFi.</p>
-            <nav>
-                <a href="https://www.instagram.com/boycubi" target="_blank">Instagram.</a>
-                <a href="https://open.spotify.com/" target="_blank">Mi spotify.</a>
-            </nav>
-        </div>
+        <a href="" class="logo">
+            <img src="" alt="logo de pagina">
+            <h2 class="nombre-pagina">Stay in LoFi</h2>
+        </a>
+        <nav>
+            <a href="#playlists" class="nav-link">Playlists</a>
+            <a href="#pomodoro" class="nav-link">Pomodoro</a>
+            <a href="https://www.youtube.com" class="nav-link" target="_blank">¿Cómo funciona?</a>
+        </nav>
     </header>
-    <section id="hero">
-        <h1>LoFi music to:</h1>
-        <h3>study, relax, read, sleep, coding and more.</h3>
 
-        <!-- playlists de spotify -->
+    <!--PLAYLISTS.-->
+        <section id="hero">
+        <div class="container">
+            <h1 id="inicio">LoFi music to:</h1>
+            <h3>study, relax, read, sleep, coding and more.</h3>
+            <p>Con la música y los sonidos que elijas, podés generear el ambiente perfecto para concentrarte al estudiar y trabajar o bien para relajarte leyendo algo, tomando una siesta o jugando a tus juegos favoritos.</p>
 
-        <div id="playlists">
-            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/5Xkw0sFd5Y89K7kfrusZsf" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3csziQj0d5b" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/41ddZMYunVji7K0G0FD8e9" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
+            <div id="playlists">
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/5Xkw0sFd5Y89K7kfrusZsf" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3csziQj0d5b" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/41ddZMYunVji7K0G0FD8e9" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div> 
 
-        <!-- sonidos ambientales -->
+         <!-- sonidos ambientales -->
 
-        <div id="sonidos_ambientes">
+        <!--<div id="sonidos_ambiente">
             <audio controls loop>
                 <source src="./assets/audios/lluvia1.mp3" type="audio/mp3">
                     Quit Rain.
@@ -54,7 +62,103 @@
                     Olas del mar.
             </audio>
         </div>
-        <script src="./app.js"></script>
-    </section>
+    </section>  -->
+
+        <!--texto pomodoro-->
+    <section id="pomodoro">
+        <div class="container">
+            <h1>Estudia con el método <i>POMODORO</i></h1>
+            <h3>¿Cómo funciona?</h3>
+            <p> Se basa en usar un <b>temporizador</b> para dividir el tiempo en intervalos fijos, llamados pomodoros, de 25 minutos de actividad, seguidos de 5 minutos de descanso, con pausas más largas cada cuatro pomodoros.</p>
+        </div>
+
+        <!--Ventana emergente-->
+        <a href="#modal" id="show-modal">Empezar pomodoro.</a>
+        <aside id="modal" class="modal">
+            <div class="content-modal">
+                <header>
+                    <a href="#" class="close-modal">_</a>
+                    <!-- POMODORO TIMER -->
+                    <h2 id="titulo_ventana">⏳POMODORO TIMER⌛</h2>
+                </header>
+                <article>
+                    <figure class="clock">
+                        <div class="mins">0</div>
+                        <div>:</div>
+                        <div class="secs">00</div>
+                        <audio
+                            src="./assets/audios/bells.mp3"
+                        ></audio>
+                        <audio class="reloj" src="./assets/audios/reloj.mp3"
+                        ></audio>
+                        <svg class="progress-ring" height="120" width="120">
+                            <circle
+                                class="progress-ring__circle"
+                                stroke-width="8"
+                                fill="transparent"
+                                r="50"
+                                cx="60"
+                                cy="60"
+                            />
+                        </svg>
+                    </figure>
+            
+                    <div class="btn-group">
+                        <button class="start">Empezar</button>
+                        <button class="reset">Reiniciar</button>
+                        <button class="pause">Pausa</button>
+                    </div>
+            
+                    <form action=".">
+                        <label for="focusTime">Concentrate durante (mins)</label>
+                        <input type="number" value="1" id="focusTime" />
+                        <label for="breakTime">Descansa durante (mins)</label>
+                        <input type="number" value="1" id="breakTime" />
+                        <button type="submit" id="cambios">Guardar cambios</button>
+                    </form>
+                </section>
+                </article>
+            </div>
+            <a href="#" class="btn-close-modal"></a>
+        </aside>
+        <br><br><br><br><br>
+
+
+        <!--FOOTER-->
+
+        <footer class="pie-pagina">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="img/logotipo-sleedw.svg" alt="Logo de página">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>SOBRE LA PÁGINA.</h2>
+                    <p>Creada con la intención de practicar desarrollo web, a demás, para uso personal.</p>
+                    <p>Espero que la disfrutes y, si es así, no dudes en copartirla.</p>
+                </div>
+                <div class="box">
+                    <h2>SEGUIME</h2>
+                    <div class="red-social">
+                        <a href="https://open.spotify.com/user/cubillarodriar?si=a86bd2399a444273" class="fa fa-spotify" target="_blank" ></a>
+                        <a href="https://www.instagram.com/boycubi/" target="_blank" class="fa fa-instagram"></a>
+                        <a href="https://twitter.com/boycubi" class="fa fa-twitter" target="_blank" ></a>
+                        <a href="https://cafecito.app/boycubi" class="fa fa-dollar-sign" target="_blank" ></a>
+                        <a href="https://open.spotify.com/artist/2Oplv74vTE5uWete3PJ5DI?si=ycHr3GCaQEm4fLObGMdUfA" class="fa fa-music" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>&copy; 2022 <b>Rodrigo Cubilla</b> - todos los derechos reservados.</small>
+            </div>
+        </footer>
+
+    <script src="./progress.js"></script>
+    <script src="./timer.js"></script>
+    <script src="./settings.js"></script>
+    
 </body>
 </html>

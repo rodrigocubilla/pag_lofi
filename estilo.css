@@ -1,6 +1,431 @@
-body{
-    background-color: azure;
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Ramaraja&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
-.container{
-    background-color: rgb(229, 240, 240);
+html{
+    scroll-behavior: smooth;
 }
+#inicio{
+    font-family: 'ramaja', serif;
+}
+/*HEADER*/
+header{
+    display: flex;
+    min-height: 70px;
+    justify-content: space-between;
+    background-color: #0a141d;
+    align-items: center;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: #efefef;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+}
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+nav a:hover{
+    color: rgb(69, 158, 69);
+}
+
+@media (max-width:1200px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+/*FOOTER*/
+footer{
+    position: static;
+    bottom: 0;
+}
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: rgb(69, 158, 69);
+}
+.pie-pagina .grupo-2{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
+
+
+
+/*estilo pomodoro*/
+h1 {
+    margin: 15px 0;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+}
+input {
+    transition: 0.5s ease-in-out;
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.11);
+    border: none;
+}
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25%;
+    margin: 35px 0;
+}
+button {
+    margin: 5px 5px;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    transition: 0.1s ease-in;
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+} 
+label {
+    font-size: 12px;
+}
+form {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 370px;
+    margin: 5px auto;
+}
+form button {
+    display: flex;
+    background: rgb(69, 145, 195);
+    width: 100%;
+    margin: 5px 0;
+    color: white;
+    /* padding: 15px; */
+}
+form button:hover{  
+    background-color: rgb(39, 90, 124);
+    transition: all .2s ease-in-out;
+    /* overflow: hidden; */
+    /* box-shadow: 3px 3px 10px black; */
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 15px;
+}
+#cambios{
+    justify-content: center;
+} 
+.start {
+    background: #2079b0;
+    color: white;
+}
+.start:hover{  
+    color: burlywood;
+    transition: all .2s ease-in-out;
+    box-shadow: 1px 3px 10px #131313;
+}
+.break {
+    background: #2079b0;
+    color: white;
+}
+.break:hover{  
+    color: burlywood;
+    transition: all .2s ease-in-out;
+    box-shadow: 1px 3px 10px #131313;
+}
+.reset {
+    background: #2079b0;
+    color: white;
+}
+.reset:hover{  
+    color: burlywood;
+    transition: all .2s ease-in-out;
+    box-shadow: 1px 3px 10px #131313;
+}
+.pause {
+    background: #2079b0;
+    color: white;
+}
+/* #1d4258 */
+.pause:hover{  
+    color: burlywood;
+    transition: all .2s ease-in-out;
+    box-shadow: 1px 3px 10px #131313;
+}
+.Reanudar {
+    background: #2079b0;
+    color: white;
+}
+.Reanudar:hover{  
+    color: burlywood;
+    transition: all .2s ease-in-out;
+    box-shadow: 1px 3px 10px #131313;
+}
+
+.clock {
+    padding: 3px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 30%;
+    font-size: 24px;
+}
+.progress-ring {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.progress-ring__circle {
+    transition: 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: rgb(51, 65, 255);
+} 
+.danger {
+    stroke: rgb(243, 17, 28);
+    animation: pulse 0.9s ease-in-out infinite;
+}
+
+/*javascript pomodoro*/
+@keyframes pulse {
+    0%,
+    100% {
+      transform: rotate(-90deg) scale(1);
+    }
+    50% {
+      transform: rotate(-90deg) scale(1.05);
+    }
+    75% {
+      transform: rotate(-90deg) scale(0.8);
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    body {
+       /* display: grid;
+      grid-template-areas:
+        "head head"
+        "clock form"
+        "btns ji";  */
+    }
+    .btn-group {
+      grid-area: btns;
+      justify-content: center; 
+      margin-top: 0%;
+    }
+    .clock {
+      grid-area: clock;
+      height: 20%;
+      padding-bottom: 40px;
+      padding-top: 60px; 
+    }
+    h1 {
+      grid-area: head;
+  
+      align-self: center;
+    }
+    form {
+      align-self: center;
+      justify-self: center;
+      grid-area: form;
+      width: 50%;
+      justify-content: space-around;
+    }
+    footer {
+      width: 100%;
+    }
+}
+  
+@media screen and (max-width: 375px) {
+    form {
+      height: 40%;
+    }
+    footer {
+      position: static;
+    }
+    .modal .content-modal{
+        width: 90%;
+        max-width: none;
+        left: 5%;
+        margin-left: 0;
+    }
+}
+
+
+
+/*ventana emergente*/
+
+#titulo_ventana {
+    color: black;
+    padding: 0.8em;
+}
+#show-modal{
+    position: absolute;
+    text-align: center;
+    background-color: #1d4258;
+    color: rgb(243, 243, 240);
+    padding: 15px;
+    font-weight: 500;
+    font-size: 1.5em;
+    border-radius: 10px;
+    text-decoration: none;
+    align-items: center;
+}
+#show-modal:hover{
+    cursor: pointer;
+    color: burlywood;
+    transition: all .2s ease-in-out;
+    box-shadow: 1px 3px 10px #131313;
+}
+.modal{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    z-index: 9999999;
+    background: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.modal .content-modal{
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    left: 50%;
+    top: -100vh;
+    transition: top 0.35s ease;
+    margin-left: -250px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 9999999;
+}
+
+.modal h2{
+    padding: 0.5em;
+    text-align: center;
+    color: #4444;
+    margin: 0;
+}
+.modal article{
+    height: 520px;
+    background: #94abeb;
+
+}
+
+.close-modal{
+    color: #e74c3c;
+    position: absolute;
+    top: 0.01em;
+    right: 0.37em;
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.modal a:hover{
+    color: #83281e;
+}
+.modal:target{
+    opacity: 1;
+    top: 0;
+}
+.modal .btn-close-modal{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+}
+.modal:target .content-modal{
+    top: 50px;
+    transition: top 0.35 ease;
+}
+
+
+/*CARROUSELL*/
+
