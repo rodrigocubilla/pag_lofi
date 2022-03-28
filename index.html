@@ -6,81 +6,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stay in LoFi: study, work, chill and relax.</title>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="./assets/imgs/logo.png">
+    <link rel="icon" href="./assets/imgs/cafe.png">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!--HEADER-->
-    <header>
-        <a href="" class="logo">
-            <img src="" alt="logo de pagina">
-            <h2 class="nombre-pagina">Stay in LoFi</h2>
-        </a>
-        <nav>
-            <a href="#playlists" class="nav-link">Playlists</a>
-            <a href="#pomodoro" class="nav-link">Pomodoro</a>
-            <a href="https://www.youtube.com" class="nav-link" target="_blank">¿Cómo funciona?</a>
-        </nav>
-    </header>
+    <div class="contenedor--gral">
+        <!--HEADER-->
+        <header>
+            <a href="" class="logo" id="logotipo">
+                <img src="./assets/imgs/cafe.png" alt="logo de pagina">
+                <h2 class="nombre-pagina">Stay in LoFi</h2>
+            </a>
+            <nav>
+                <a href="#playlists" class="nav-link">Playlists</a>
+                <a href="#pomodoro" class="nav-link">Pomodoro</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="https://www.youtube.com" class="nav-link" target="_blank"><b><span id="work">¿Cómo funciona?</span></b></a>
+            </nav>
+        </header>
 
-    <!--PLAYLISTS.-->
+        <!--::::PLAYLISTS INTRO::::-->
         <section id="hero">
-        <div class="container">
-            <h1 id="inicio">LoFi music to:</h1>
-            <h3>study, relax, read, sleep, coding and more.</h3>
-            <p>Con la música y los sonidos que elijas, podés generear el ambiente perfecto para concentrarte al estudiar y trabajar o bien para relajarte leyendo algo, tomando una siesta o jugando a tus juegos favoritos.</p>
+            <div class="container_playlists">
+                <h1 id="inicio">Música para:</h1>
+                <h3>estudiar, leer, relajarte, dormir, programar, jugar y más.</h3><br><br><br>
+                <p>Con la música y los sonidos que elijas, podés generear el ambiente perfecto para concentrarte al estudiar y trabajar o bien para relajarte leyendo algo, tomando una siesta o jugando a tus juegos favoritos.</p><br>
+                <p>Además, un método pomodoro para que puedas organizar tu tiempo de estudio/trabajo o una alarma para despertarte de la siesta.</p>
+            </div>   
+        </section>  
 
-            <div id="playlists">
-                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                <iframe src="https://open.spotify.com/embed/playlist/5Xkw0sFd5Y89K7kfrusZsf" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3csziQj0d5b" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                <iframe src="https://open.spotify.com/embed/playlist/41ddZMYunVji7K0G0FD8e9" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <section class="playlists">
+            <!--playlists finalmente-->
+            <div class="Carousel">
+                <h2 id="playlists">Playlists</h2>
+                <div class="slick-list" id="slick-list">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                    <div class="slick-track" id="track">
+                        <div class="slick">
+                            <div>
+                                <div href="/">
+                                    <h4>lofi beats</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/5Xkw0sFd5Y89K7kfrusZsf" width="250" height="300" frameborder="10" ></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div href="/">
+                                    <h4>high on lofi</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/41ddZMYunVji7K0G0FD8e9" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>life is strange</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/3te1sgQyhFja1NAo8oZEJs" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>life is strange 2</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/album/4zgaYE33JRhrZpTrAFIKSf" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>movie</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4OzrY981I1W" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>videogames</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdfOcg1fm0VG" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>beats</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>homework</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3csziQj0d5b" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>antisocial</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/5myCIfnYhZv0pyMsjL6TJL" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>classic</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/7cDFT3t6MmjzjyqNSO38ki" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>mac (rip)</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2NufN6" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>jazz</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbITWG1ZJKYt" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>bootleg</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/3yBflN3ueMFganokHcqVvf" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>ghibli studios</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/40iIT9NgP8ofz9RfX1eBi4" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <div>
+                                    <h4>dreaming</h4>
+                                    <picture>
+                                        <iframe src="https://open.spotify.com/embed/playlist/1rCaiMMknuz8orSUCH9gU4" width="250" height="300" frameborder="10"></iframe>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
             </div>
-        </div> 
+        </section>
+        <!--::::texto pomodoro::::-->
+        <section id="pomodoro">
+            <div class="container_pm">
+                <h1>Estudia con el método <span class="color-acento"><b>POMODORO</b></span></h1>
+                <h3>¿Cómo funciona?</h3>
+                <p> Se basa en usar un <b><span class="color-acento">temporizador</span></b> para dividir el tiempo en intervalos fijos, llamados pomodoros, de 25 minutos de actividad, seguidos de 5 minutos de descanso, con pausas más largas cada cuatro pomodoros.</p>
+                <a href="#modal" id="show-modal"><button  class="boton">ABRIR POMODORO</button></a>
+            </div>
 
-         <!-- sonidos ambientales -->
+            <!--::::Ventana emergente::::-->
+            <aside id="modal" class="modal">
+                <div class="content-modal">
+                    <header>
+                        <a href="#" class="close-modal">_</a>
+                        <!-- POMODORO TIMER -->
+                        <h2 id="titulo_ventana">⏳POMODORO TIMER⌛</h2>
+                    </header>
 
-        <!--<div id="sonidos_ambiente">
-            <audio controls loop>
-                <source src="./assets/audios/lluvia1.mp3" type="audio/mp3">
-                    Quit Rain.
-            </audio>
-
-            <audio controls loop>
-                <source src="./assets/audios/lluvia_bosque.mp3" type="audio/mp3">
-                    Lluvia en el bosque.
-            </audio>
-
-            <audio controls loop>
-                <source src="./assets/audios/fogata_bosque.mp3" type="audio/mp3">
-                    Fogata en el bosque.
-            </audio>
-
-            <audio controls loop>
-                <source src="./assets/audios/olas_mar.mp3" type="audio/mp3">
-                    Olas del mar.
-            </audio>
-        </div>
-    </section>  -->
-
-        <!--texto pomodoro-->
-    <section id="pomodoro">
-        <div class="container">
-            <h1>Estudia con el método <i>POMODORO</i></h1>
-            <h3>¿Cómo funciona?</h3>
-            <p> Se basa en usar un <b>temporizador</b> para dividir el tiempo en intervalos fijos, llamados pomodoros, de 25 minutos de actividad, seguidos de 5 minutos de descanso, con pausas más largas cada cuatro pomodoros.</p>
-        </div>
-
-        <!--Ventana emergente-->
-        <a href="#modal" id="show-modal">Empezar pomodoro.</a>
-        <aside id="modal" class="modal">
-            <div class="content-modal">
-                <header>
-                    <a href="#" class="close-modal">_</a>
-                    <!-- POMODORO TIMER -->
-                    <h2 id="titulo_ventana">⏳POMODORO TIMER⌛</h2>
-                </header>
                 <article>
                     <figure class="clock">
                         <div class="mins">0</div>
@@ -116,7 +254,7 @@
                         <input type="number" value="1" id="breakTime" />
                         <button type="submit" id="cambios">Guardar cambios</button>
                     </form>
-                </section>
+        </section>
                 </article>
             </div>
             <a href="#" class="btn-close-modal"></a>
@@ -130,32 +268,36 @@
             <div class="grupo-1">
                 <div class="box">
                     <figure>
-                        <a href="#">
-                            <img src="img/logotipo-sleedw.svg" alt="Logo de página">
+                        <a href="#logotipo">
+                            <img src="./assets/imgs/cafe.png" alt="Logo de página">
                         </a>
                     </figure>
                 </div>
                 <div class="box">
                     <h2>SOBRE LA PÁGINA.</h2>
-                    <p>Creada con la intención de practicar desarrollo web, a demás, para uso personal.</p>
-                    <p>Espero que la disfrutes y, si es así, no dudes en copartirla.</p>
+                    <p>Creada con la intención de practicar desarrollo web y, a demás, para uso personal.</p>
+                    <p>Espero que la disfrutes. Si es así, no dudes en copartirla con tus amigos.</p>
                 </div>
                 <div class="box">
-                    <h2>SEGUIME</h2>
+                    <h2 id="contacto">SEGUIME</h2>
                     <div class="red-social">
-                        <a href="https://open.spotify.com/user/cubillarodriar?si=a86bd2399a444273" class="fa fa-spotify" target="_blank" ></a>
-                        <a href="https://www.instagram.com/boycubi/" target="_blank" class="fa fa-instagram"></a>
-                        <a href="https://twitter.com/boycubi" class="fa fa-twitter" target="_blank" ></a>
-                        <a href="https://cafecito.app/boycubi" class="fa fa-dollar-sign" target="_blank" ></a>
-                        <a href="https://open.spotify.com/artist/2Oplv74vTE5uWete3PJ5DI?si=ycHr3GCaQEm4fLObGMdUfA" class="fa fa-music" target="_blank"></a>
+                        <a href="https://open.spotify.com/user/cubillarodriar?si=a86bd2399a444273" class="fa fa-spotify" id="spotify" target="_blank" ></a>
+                        <a href="https://www.instagram.com/boycubi/" target="_blank" class="fa fa-instagram" id="ig"></a>
+                        <a href="https://twitter.com/boycubi" class="fa fa-twitter" target="_blank" id="tw"></a>
+                        <a href="https://cafecito.app/boycubi" class="fa fa-dollar-sign" target="_blank" id="money"></a>
+                        <a href="https://open.spotify.com/artist/2Oplv74vTE5uWete3PJ5DI?si=ycHr3GCaQEm4fLObGMdUfA" class="fa fa-music" target="_blank" id="musica"></a>
+                        <a href="https://github.com/rodrigocubilla" class="fa fa-github" target="_blank" id="gh"></a>
                     </div>
+                    <br><br>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDXmckKPjNvDnxKfNWFQRkJRBdDjqkNhdQZXRkxxdcMQSTGddVQRJkqpMKnzNqRcNkQSPTh" target="_blank"><span class="mail">cubillarodriar@gmail.com</span></a>
                 </div>
             </div>
             <div class="grupo-2">
                 <small>&copy; 2022 <b>Rodrigo Cubilla</b> - todos los derechos reservados.</small>
             </div>
         </footer>
-
+    </div>
+    <script defer src="main.js"></script>
     <script src="./progress.js"></script>
     <script src="./timer.js"></script>
     <script src="./settings.js"></script>

@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Ramaraja&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 html{
     scroll-behavior: smooth;
-}
-#inicio{
-    font-family: 'ramaja', serif;
 }
 /*HEADER*/
 header{
@@ -33,13 +30,18 @@ a{
 .logo img{
     height: 50px;
     margin-right: 10px;
+    filter: invert(0.4) sepia(1);
 }
 nav a{
     font-weight: 600;
     padding-right: 10px;
 }
 nav a:hover{
-    color: rgb(69, 158, 69);
+    color: #8C542A;
+}
+
+#work{
+    color: #c28150;
 }
 
 @media (max-width:1200px){
@@ -51,6 +53,212 @@ nav a:hover{
         padding: 10px 0px;
     }
 }
+
+
+/*BODY*/
+#hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.7)
+    )
+    ,url(./assets/imgs/fonto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+#inicio{
+    font-size:3em;
+}
+#hero .container_playlists{
+    font-size: 2em;
+    height: 90vh;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1.6%;
+    margin-bottom: 2%;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+#hero .container_playlists h3{
+    text-align: center;
+}
+
+.boton{
+    margin-top: 20px;
+    font-size: 2.3em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    background-color: #0d2033;
+    color: rgb(243, 243, 240);
+}
+
+.boton:hover{
+    cursor: pointer;
+    color: #D8B499;
+    background-color: #1f3b57;
+    transition: all .2s ease-in-out;
+    box-shadow: 1px 3px 10px #131313;
+}
+.color-acento{
+    color: 	#8C542A;
+    text-shadow: 1px 1px 1px #D8B499;
+}
+#pomodoro .container_pm{
+    text-align: center;
+    padding: 200px 12px;
+    height: 30vh; 
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1.6%;
+    margin-bottom: 2%; 
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
+}
+#pomodoro h1{
+    font-size: 2.6em;
+}
+#pomodoro .container_pm h3{
+    font-size: 2.4em;
+}
+#pomodoro .container_pm p{
+    font-size: 2em;
+}
+
+
+/*responsive*/
+.contenedor--gral{
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*PLAYLISTS*/
+.playlists{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(./assets/imgs/fondo\ playlists.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+}
+h4, h2,small,a{
+    margin: 0;
+    padding: 0;
+}
+.Carousel{
+    width: 100%;
+    margin: 0px 60px;
+}
+.Carousel h2{
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* images */
+
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.slick h4{
+    position: relative;
+    z-index: 2;
+    font-size: 22px;
+    line-height: 23px;
+    color: rgb(240, 240, 240);
+    padding-top: 20px;
+}
+.slick a img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+/* buttons */
+
+.slick-arrow{
+    opacity: .8;
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,.7);
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
+
 
 /*FOOTER*/
 footer{
@@ -80,6 +288,7 @@ footer{
 }
 .pie-pagina .grupo-1 .box figure img{
     width: 250px;
+    filter: invert(0.4) sepia(1);
 }
 .pie-pagina .grupo-1 .box h2{
     color: #fff;
@@ -101,10 +310,31 @@ footer{
     margin-right: 10px;
     background-color: #0d2033;
     text-align: center;
-    transition: all 300ms ease;
+    transition: all 0.8s ease;
 }
-.pie-pagina .grupo-1 .red-social a:hover{
-    color: rgb(69, 158, 69);
+.mail{
+    text-decoration: underline;
+}
+#spotify:hover{
+    background: rgb(69, 158, 69);
+}
+#ig:hover{
+    background: #C13584;
+}
+#tw:hover{
+    background: #1DA1F2;
+}
+#money:hover{
+    background: #85BB65;
+}
+#musica:hover{
+    background: #F77737 ;
+}
+#gh:hover{
+    background:#171515;
+}
+.pie-pagina .grupo-1 .red-social a:active{
+    background-color: #262626;
 }
 .pie-pagina .grupo-2{
     font-family: 'Open Sans', sans-serif;
@@ -337,27 +567,30 @@ form button:hover{
 /*ventana emergente*/
 
 #titulo_ventana {
-    color: black;
+    margin-left: 90px;
+    color: rgb(240, 240, 240);
     padding: 0.8em;
 }
-#show-modal{
+/* #show-modal{
     position: absolute;
-    text-align: center;
-    background-color: #1d4258;
+    background-color: #0d2033;
     color: rgb(243, 243, 240);
     padding: 15px;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1em;
     border-radius: 10px;
     text-decoration: none;
-    align-items: center;
-}
+    margin-left: 25%;
+    margin-bottom: 60%;
+    transform: translateX(-40%);
+    transform: translateY(-280%);  
+} 
 #show-modal:hover{
     cursor: pointer;
-    color: burlywood;
+    color: #D8B499;
     transition: all .2s ease-in-out;
     box-shadow: 1px 3px 10px #131313;
-}
+}*/
 .modal{
     position: fixed;
     top: -100vh;
@@ -368,6 +601,8 @@ form button:hover{
     height: 100vh;
     opacity: 0;
     transition: opacity 0.35s ease;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal .content-modal{
@@ -383,21 +618,29 @@ form button:hover{
     border-radius: 5px;
     z-index: 9999999;
 }
-
+#pomodoro .container_pm{
+    height: 50vh;
+    /* margin: 15%; */
+    font-size: 1em;
+    justify-content: center;
+    padding: 5px;
+}
+#pomodoro .container_pm h3{
+    text-align: center;
+}
 .modal h2{
     padding: 0.5em;
     text-align: center;
-    color: #4444;
+    color:rgb(69, 145, 195);
     margin: 0;
 }
 .modal article{
-    height: 520px;
-    background: #94abeb;
-
+    height: 440px;
+    background: #efefef;
 }
 
 .close-modal{
-    color: #e74c3c;
+    color: #efefef;
     position: absolute;
     top: 0.01em;
     right: 0.37em;
@@ -425,7 +668,3 @@ form button:hover{
     top: 50px;
     transition: top 0.35 ease;
 }
-
-
-/*CARROUSELL*/
-

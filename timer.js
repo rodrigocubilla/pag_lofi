@@ -31,8 +31,7 @@ function decremenT() {
   secdiv.textContent = seconds % 60 > 9 ? seconds % 60 : `0${seconds % 60}`;
   if (circle.classList.contains("danger")) {
     circle.classList.remove("danger");
-    // clock.play();
-  }
+  };
 
   if (seconds > 0) {
     perc = Math.ceil(((totalsecs - seconds) / totalsecs) * 100);
@@ -41,11 +40,12 @@ function decremenT() {
     initial = window.setTimeout("decremenT()", 1000);
     if (seconds < 10) {
       circle.classList.add("danger");
+      clock.play();
     }
   } else {
     mins = 00;
     seconds = 00;
-    //bell.play();
+    bell.play();
     let btn = localStorage.getItem("btn");
 
     if (btn === "focus") {
