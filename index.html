@@ -213,55 +213,54 @@
             <!--::::Ventana emergente::::-->
             <aside id="modal" class="modal">
                 <div class="content-modal">
-                    <header>
+                    <header id="cabecera_modal">
                         <a href="#" class="close-modal">_</a>
                         <!-- POMODORO TIMER -->
                         <h2 id="titulo_ventana">⏳POMODORO TIMER⌛</h2>
                     </header>
 
-                <article>
-                    <figure class="clock">
-                        <div class="mins">0</div>
-                        <div>:</div>
-                        <div class="secs">00</div>
-                        <audio
+                    <article>
+                        <figure class="clock">
+                            <div class="mins">0</div>
+                            <div>:</div>
+                            <div class="secs">00</div>
+                            <audio
                             src="./assets/audios/bells.mp3"
-                        ></audio>
-                        <audio class="reloj" src="./assets/audios/reloj.mp3"
-                        ></audio>
-                        <svg class="progress-ring" height="120" width="120">
-                            <circle
-                                class="progress-ring__circle"
-                                stroke-width="8"
-                                fill="transparent"
-                                r="50"
-                                cx="60"
-                                cy="60"
-                            />
-                        </svg>
-                    </figure>
+                            ></audio>
+                                <audio class="reloj" src="./assets/audios/reloj.mp3"
+                            ></audio>
+                            <svg class="progress-ring" height="120" width="120">
+                                <circle
+                                    class="progress-ring__circle"
+                                    stroke-width="8"
+                                    fill="transparent"
+                                    r="50"
+                                    cx="60"
+                                    cy="60"
+                                />
+                            </svg>
+                        </figure>
             
-                    <div class="btn-group">
-                        <button class="start">Empezar</button>
-                        <button class="reset">Reiniciar</button>
-                        <button class="pause">Pausa</button>
-                    </div>
+                        <div class="btn-group">
+                            <button class="start">Empezar</button>
+                            <button class="reset">Reiniciar</button>
+                            <button class="pause">Pausa</button>
+                        </div>
             
-                    <form action=".">
-                        <label for="focusTime">Concentrate durante (mins)</label>
-                        <input type="number" value="1" id="focusTime" />
-                        <label for="breakTime">Descansa durante (mins)</label>
-                        <input type="number" value="1" id="breakTime" />
-                        <button type="submit" id="cambios">Guardar cambios</button>
-                    </form>
+                        <form action=".">
+                            <label for="focusTime"><b>Concentrate durante (mins)</b></label>
+                            <input type="number" value="1" id="focusTime" />
+                            <label for="breakTime"><b>Descansa durante (mins)</b></label>
+                            <input type="number" value="1" id="breakTime" />
+                            <button type="submit" id="cambios">Guardar cambios</button>
+                        </form>
         </section>
-                </article>
-            </div>
-            <a href="#" class="btn-close-modal"></a>
-        </aside>
-        <br><br><br><br><br>
-
-
+                    </article>
+                </div>
+                <a href="#" class="btn-close-modal"></a>
+            </aside>
+                    <br><br><br><br><br>
+        
         <!--FOOTER-->
 
         <footer class="pie-pagina">

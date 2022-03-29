@@ -411,14 +411,14 @@ form {
 }
 form button {
     display: flex;
-    background: rgb(69, 145, 195);
+    background: #C29472;
     width: 100%;
     margin: 5px 0;
     color: white;
     /* padding: 15px; */
 }
 form button:hover{  
-    background-color: rgb(39, 90, 124);
+    background-color: #664732;
     transition: all .2s ease-in-out;
     /* overflow: hidden; */
     /* box-shadow: 3px 3px 10px black; */
@@ -426,11 +426,15 @@ form button:hover{
     margin: 10px 0;
     padding: 15px;
 }
+form button:active{
+    color: yellow;
+    background-color: #3b2d23;
+}
 #cambios{
     justify-content: center;
 } 
 .start {
-    background: #2079b0;
+    background: #C29472;
     color: white;
 }
 .start:hover{  
@@ -439,7 +443,7 @@ form button:hover{
     box-shadow: 1px 3px 10px #131313;
 }
 .break {
-    background: #2079b0;
+    background: #8d694f;
     color: white;
 }
 .break:hover{  
@@ -448,7 +452,7 @@ form button:hover{
     box-shadow: 1px 3px 10px #131313;
 }
 .reset {
-    background: #2079b0;
+    background: #C29472;
     color: white;
 }
 .reset:hover{  
@@ -457,7 +461,7 @@ form button:hover{
     box-shadow: 1px 3px 10px #131313;
 }
 .pause {
-    background: #2079b0;
+    background: #C29472;
     color: white;
 }
 /* #1d4258 */
@@ -467,7 +471,7 @@ form button:hover{
     box-shadow: 1px 3px 10px #131313;
 }
 .Reanudar {
-    background: #2079b0;
+    background: #C29472;
     color: white;
 }
 .Reanudar:hover{  
@@ -497,7 +501,7 @@ form button:hover{
     transition: 0.5s;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    stroke: rgb(51, 65, 255);
+    stroke: #194e6e;
 } 
 .danger {
     stroke: rgb(243, 17, 28);
@@ -575,9 +579,16 @@ form button:hover{
 
 #titulo_ventana {
     margin-left: 90px;
-    color: rgb(240, 240, 240);
+    color: rgb(240, 240, 240); 
     padding: 0.8em;
 }
+#cabecera_modal{
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    position: static;
+    margin-top: 0px;
+    background-color: #664732;
+}  
 /* #show-modal{
     position: absolute;
     background-color: #0d2033;
